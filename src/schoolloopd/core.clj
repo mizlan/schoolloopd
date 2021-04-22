@@ -1,9 +1,6 @@
 (ns schoolloopd.core
-  (:require [clj-http.client :as client]
-            [schoolloopd.defaults :as defaults]
+  (:require [schoolloopd.defaults :as defaults]
             [schoolloopd.fetcher :as fetch]
-            [net.cgrand.enlive-html :as html]
-            [clojure.string :as str]
             [schoolloopd.updater :as upd]))
 
 (comment
