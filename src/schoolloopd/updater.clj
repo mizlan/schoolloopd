@@ -29,10 +29,10 @@
          (printf "Parse error for %s: %s\n" source (.getMessage e)))
        nil))))
 
-(defn load-save-cache
+(defn load-data
   "Load the cache, which should be a hashset. Assume anything other
   than a hashset is a failure."
-  ([] (load-save-cache save-path))
+  ([] (load-data save-path))
   ([source]
    (let [obj (load-edn source)]
      (if (instance? clojure.lang.PersistentHashSet obj)
