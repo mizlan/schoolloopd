@@ -42,7 +42,7 @@
 
 (defn fetch [opts]
   (let [p (portal opts)]
-    (->> (map fetch/grade-info
+    (->> (map grade-info
               (-> p
                   :body
                   html/html-snippet
