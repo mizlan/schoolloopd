@@ -30,11 +30,11 @@
        nil))))
 
 (defn load-data
-  "Load the cache, which should be a hashset. Assume anything other
-  than a hashset is a failure."
+  "Load the cache, which should be a map. Assume anything other
+  than a map is a failure."
   ([] (load-data save-path))
   ([source]
    (let [obj (load-edn source)]
-     (if (instance? clojure.lang.PersistentHashSet obj)
+     (if (instance? clojure.lang.PersistentHashMap obj)
        obj
        nil))))
