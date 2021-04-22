@@ -1,8 +1,7 @@
 (ns schoolloopd.fetcher
   (:require [clj-http.client :as client]
             [net.cgrand.enlive-html :as html]
-            [clojure.string :as str]
-            [schoolloopd.fetcher :as fetch]))
+            [clojure.string :as str]))
 
 
 (defn grade-info [x]
