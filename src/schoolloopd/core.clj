@@ -17,7 +17,7 @@
      (upd/save-data data))))
 
 (comment
-  (fetch/fetch {:prefix d/sl-prefix
-                :username d/sl-username
-                :password d/sl-password})
+  (while true
+    (check)
+    (Thread/sleep 60000))
   )
