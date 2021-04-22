@@ -21,7 +21,7 @@
             "-message" (terminal-notifier-escape msg)
             "-appIcon" "https://www.freeiconspng.com/uploads/emergency-alert-icon-alert-icon-8.png"))
 
-(defn notify [old new]
+(defn notify [{:keys [old new]}]
   (let [deltas (calc-deltas old new)
         changed (->> deltas (remove #(= 0 (second %))))]
     (println (pr-str changed))
